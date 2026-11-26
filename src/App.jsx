@@ -30,6 +30,192 @@ const TESTIMONIAL_1_IMG =
 const TESTIMONIAL_2_IMG =
   'https://mlbkrchhogqb.i.optimole.com/w:130/h:130/q:mauto/f:best/dpr:2/https://jpprivategp.co.uk/wp-content/uploads/2025/10/testimonials-002-copyright.jpg'
 
+const SERVICE_CATEGORIES = [
+  {
+    title: 'General GP Services',
+    items: [
+      'Full GP consultations (in-person / online)',
+      'Acute illness management (e.g., Urine or chest infections, minor ailments)',
+      'Chronic disease management (e.g., hypertension, diabetes, Obesity)',
+      'Medication reviews and prescribing',
+      'Repeat prescriptions',
+      'Sick notes / letters / referrals',
+      'Second opinions',
+    ],
+  },
+  {
+    title: 'Children’s Health (Paediatrics)',
+    items: ['Common childhood illness assessment'],
+  },
+  {
+    title: 'Mental Health',
+    items: [
+      'Anxiety and depression assessment',
+      'Stress and burnout management',
+      'Supportive counselling',
+      'Medication management for common mental health conditions',
+    ],
+  },
+  {
+    title: 'Health Screening & Preventive Care',
+    items: [
+      'Full health checks (basic, advanced, executive)',
+      'Cardiovascular risk assessment',
+      'Diabetes screening',
+      'Cancer screening (e.g., PSA, bowel tests)',
+      'Well-man and well-woman checks',
+      'Lifestyle and wellbeing assessments',
+    ],
+  },
+  {
+    title: 'Women’s Health',
+    items: [
+      'Cervical smears',
+      'Contraception advice and prescriptions',
+      'Menopause and perimenopause care',
+      'Hormone replacement therapy (HRT)',
+      'Breast health assessments',
+      'Fertility and pre-conception advice',
+      'Period and PMS management',
+    ],
+  },
+  {
+    title: 'Men’s Health',
+    items: [
+      'Prostate assessment and PSA testing',
+      'Erectile dysfunction management',
+      'Testosterone and hormonal assessments',
+      'Weight and metabolic health checks',
+    ],
+  },
+  {
+    title: 'Sexual Health Services',
+    items: ['Contraceptive counselling', 'Pregnancy testing & early pregnancy advice'],
+  },
+  {
+    title: 'Diagnostic Testing',
+    items: [
+      'Blood tests (routine and specialised)',
+      'ECGs',
+      'Urine testing',
+      'Swabs, cultures, viral screens',
+      'Imaging referrals (X-ray, ultrasound, MRI, CT)',
+    ],
+  },
+]
+
+const HEALTH_CALCULATORS = [
+  {
+    name: 'Heart age calculator',
+    url: 'https://www.bhf.org.uk/informationsupport/risk-factors/check-your-heart-age',
+  },
+  { name: 'QDiabetes Score', url: 'https://qdiabetes.org/' },
+  {
+    name: 'BMI Calculator',
+    url: 'https://extras.bhf.org.uk/patientinfo/bmi-v1.01/app/index.html',
+  },
+  {
+    name: 'Body fat percentage calculator',
+    url: 'https://www.bhf.org.uk/informationsupport/heart-matters-magazine/nutrition/weight/best-way-to-measure-body-fat',
+  },
+  {
+    name: 'Osteoporosis (Thinning of the Bone) risk calculator',
+    url: 'https://qfracture.org/',
+  },
+]
+
+const GP_CONSULTATION_PRICES = [
+  {
+    title: 'Video Consultation',
+    price: '£79',
+    desc: 'Remote GP consultation via secure video for convenience and follow-up care.',
+  },
+  {
+    title: 'GP Face-to-Face Appointment',
+    price: '£90',
+    desc: 'In-person consultation for diagnosis, and management plan.',
+  },
+  {
+    title: 'Home Visit (9:00am–5:00pm)',
+    price: '£250',
+    desc: 'GP visit in your own home, suitable for patients unable to attend the clinic.',
+  },
+  {
+    title: 'GP Home Visit (5:00pm–8:00pm)',
+    price: '£350',
+    desc: 'Urgent GP home visit outside standard working hours. Suitable for non-emergency medical problems.',
+  },
+  {
+    title: 'Private Referral for Blood tests, Scans, & Xrays',
+    price: null,
+    desc: 'Direct GP Referral for MRI, CT- scans, USS (ultrasound scans), X-rays and blood tests. Require GP assessment and appropriate diagnostic referral.',
+  },
+]
+
+const MEDICAL_LETTERS_PRICES = [
+  {
+    title: 'Sick Note with Telephone Consultation',
+    price: '£75',
+    desc: 'Telephone assessment with certification when medically justified.',
+  },
+  {
+    title: 'Private Prescription',
+    price: '£25',
+    desc: 'Issue of a private prescription. May require GP consultation.',
+  },
+  {
+    title: 'Private Referral to Specialists',
+    price: '£75',
+    desc: 'Written referral to another healthcare provider following GP review.',
+  },
+]
+
+const DIAGNOSTICS_ITEMS = [
+  {
+    title: 'Electrocardiogram (ECG)',
+    desc: 'Heart rhythm assessment using a standard 12-lead ECG.',
+  },
+  {
+    title: 'Baseline Health Screen',
+    desc: 'FBC, kidney, liver, bone profile, cholesterol, thyroid function, and HbA1c.',
+  },
+  {
+    title: 'Hair Loss Screen',
+    desc: 'Assessment of common medical causes of hair loss, including nutritional, hormonal, and inflammatory markers. Results available within 24 hours.',
+  },
+  {
+    title: 'Pregnancy Blood and Urine Test',
+    desc: 'Laboratory confirmation of pregnancy status.',
+  },
+  {
+    title: 'Cholesterol Profile',
+    desc: 'Assessment of cardiovascular risk through lipid testing.',
+  },
+  {
+    title: 'Thyroid Blood Test',
+    desc: 'Evaluation of thyroid function and related symptoms.',
+  },
+  {
+    title: 'Urine Dip Test',
+    desc: 'Immediate screening for urinary tract infection.',
+  },
+]
+
+const CULTURES_ITEMS = [
+  {
+    title: 'Urine Culture (MCS)',
+    desc: 'Laboratory analysis to identify urinary infections and antibiotic sensitivity.',
+  },
+  {
+    title: 'Stool PCR',
+    desc: 'Advanced testing to detect bacterial, viral, and parasitic causes of diarrhoea.',
+  },
+  {
+    title: 'Sputum Culture',
+    desc: 'Identification of respiratory infections through laboratory culture.',
+  },
+]
+
 const SERVICES = [
   {
     name: 'Minor illnesses',
@@ -696,39 +882,260 @@ export default function App() {
           </>
         )}
 
-        {/* Services Page */}
+        {/* Services & Fees Page */}
         {currentPage === 'services' && (
-          <section className="py-16 sm:py-20">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-              <div className="max-w-2xl">
+          <div className="py-16 sm:py-20 space-y-20">
+            {/* Hero */}
+            <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+              <div className="max-w-3xl">
                 <p className="text-xs font-semibold uppercase tracking-widest text-[#C89D54] mb-2">
-                  Our Services
+                  JesPearl Private GP Clinic
                 </p>
-                <h1 className="text-4xl font-bold text-[#1B4332]">
-                  Comprehensive General Practice Care
+                <h1 className="text-4xl sm:text-5xl font-bold text-[#1B4332]">
+                  Our Services and Fees
                 </h1>
-                <p className="mt-4 text-lg text-[#52606D]">
-                  From acute minor illnesses to ongoing health management, we provide unhurried,
-                  personalised consultations tailored to your needs.
+                <p className="mt-4 text-lg text-[#52606D] leading-relaxed">
+                  A comprehensive range of private GP, cardiology, and diagnostic services, offering
+                  timely access to care with clear and upfront pricing.
                 </p>
               </div>
 
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {SERVICES.map((service) => (
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                {SERVICE_CATEGORIES.map((cat) => (
                   <div
-                    key={service.name}
-                    className="bg-white border border-[#E5E7EB] rounded-2xl p-6 space-y-3 hover:border-[#1E4D3B]/40 transition-colors"
+                    key={cat.title}
+                    className="bg-white border border-[#E5E7EB] rounded-2xl p-6 flex flex-col justify-between space-y-5 hover:border-[#1E4D3B]/40 transition-colors"
                   >
-                    <CheckCircle2 className="w-6 h-6 text-[#1E4D3B]" />
-                    <h2 className="text-xl font-semibold text-[#1B4332]">{service.name}</h2>
-                    <p className="text-sm text-[#52606D] leading-relaxed">{service.desc}</p>
+                    <div className="space-y-3">
+                      <h2 className="text-lg font-bold text-[#1B4332]">{cat.title}</h2>
+                      <ul className="space-y-2 text-sm text-[#52606D]">
+                        {cat.items.map((item) => (
+                          <li key={item} className="flex items-start gap-2">
+                            <CheckCircle2 className="w-4 h-4 text-[#1E4D3B] shrink-0 mt-0.5" />
+                            <span>{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    <button
+                      type="button"
+                      onClick={() => navigate('about')}
+                      className="text-sm font-semibold text-[#1E4D3B] hover:underline text-left cursor-pointer"
+                    >
+                      Learn More →
+                    </button>
                   </div>
                 ))}
               </div>
+            </section>
 
+            {/* Corporate Healthcare Service */}
+            <section className="bg-white border-y border-[#E5E7EB] py-16">
+              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-12 gap-10 items-center">
+                <div className="lg:col-span-7 space-y-4">
+                  <p className="text-xs font-semibold uppercase tracking-widest text-[#C89D54]">
+                    For Organisations
+                  </p>
+                  <h2 className="text-3xl font-bold text-[#1B4332]">
+                    Corporate Healthcare Service
+                  </h2>
+                  <p className="text-[#52606D] leading-relaxed">
+                    We partner with Companies and Organisations to support a healthier, more
+                    resilient workforce. Our corporate services provide rapid access to high-quality
+                    medical care, helping employees stay well, minimise time off work, and maintain
+                    peak performance.
+                  </p>
+                  <p className="text-[#52606D] leading-relaxed">
+                    We deliver bespoke healthcare solutions that remove barriers to timely medical
+                    care—offering fast GP access, efficient referrals, prescription support, and
+                    tailored health advice.
+                  </p>
+                  <p className="text-sm font-semibold text-[#1B4332] pt-2">
+                    By prioritising employee wellbeing, we help employers achieve:
+                  </p>
+                  <ul className="grid sm:grid-cols-2 gap-2.5 text-sm text-[#3E4C59]">
+                    {[
+                      'Reduced sickness absence',
+                      'Improved productivity and workplace performance',
+                      'Enhanced staff retention and morale',
+                      'Greater organisational resilience and continuity',
+                    ].map((benefit) => (
+                      <li key={benefit} className="flex items-center gap-2">
+                        <CheckCircle2 className="w-4 h-4 text-[#1E4D3B] shrink-0" />
+                        <span>{benefit}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <p className="text-sm text-[#52606D] italic pt-2">
+                    Our goal is to give you confidence that your team’s health is in expert hands,
+                    supporting a workplace where people feel well, stay well and work well.
+                  </p>
+                </div>
+                <div className="lg:col-span-5">
+                  <div className="rounded-3xl overflow-hidden shadow-md border border-[#E5E7EB]">
+                    <img
+                      src={SERVICES_IMAGE}
+                      alt="Corporate Healthcare Service"
+                      className="w-full h-80 object-cover"
+                    />
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            {/* Resources */}
+            <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+              <div className="max-w-3xl space-y-3">
+                <h2 className="text-3xl font-bold text-[#1B4332]">Resources</h2>
+                <p className="text-sm sm:text-base text-[#52606D] leading-relaxed">
+                  These calculators offer a simple way to understand potential health risks and
+                  overall well-being. They provide general estimates based on the information you
+                  enter and are intended to support awareness rather than replace medical advice.
+                  For accurate interpretation and personalised guidance, a consultation with a GP is
+                  recommended.
+                </p>
+              </div>
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                {HEALTH_CALCULATORS.map((calc) => (
+                  <a
+                    key={calc.name}
+                    href={calc.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-white border border-[#E5E7EB] hover:border-[#1E4D3B] rounded-xl px-5 py-4 text-sm font-semibold text-[#1B4332] flex items-center justify-between transition-colors"
+                  >
+                    <span>{calc.name}</span>
+                    <span className="text-[#1E4D3B]">↗</span>
+                  </a>
+                ))}
+              </div>
+            </section>
+
+            {/* Prices */}
+            <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+              <div className="max-w-3xl space-y-3">
+                <p className="text-xs font-semibold uppercase tracking-widest text-[#C89D54]">
+                  Clear & Upfront Pricing
+                </p>
+                <h2 className="text-3xl sm:text-4xl font-bold text-[#1B4332]">Prices</h2>
+                <p className="text-[#52606D]">
+                  Our fees reflect private GP and specialist services delivered promptly and
+                  professionally. All prices are inclusive of consultation time and clinical
+                  assessment. Additional tests, prescriptions, referrals, or treatments are charged
+                  separately where applicable. Fees are payable at the time of booking unless
+                  otherwise stated.
+                </p>
+              </div>
+
+              {/* GP Consultations */}
+              <div className="space-y-4">
+                <h3 className="text-2xl font-bold text-[#1B4332]">GP Consultations</h3>
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+                  {GP_CONSULTATION_PRICES.map((item) => (
+                    <div
+                      key={item.title}
+                      className="bg-white border border-[#E5E7EB] rounded-2xl p-6 space-y-2"
+                    >
+                      <div className="flex items-start justify-between gap-3">
+                        <h4 className="font-semibold text-[#1B4332]">{item.title}</h4>
+                        {item.price && (
+                          <span className="text-lg font-bold text-[#1E4D3B] shrink-0">
+                            {item.price}
+                          </span>
+                        )}
+                      </div>
+                      <p className="text-sm text-[#52606D]">{item.desc}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* GP Specialist Cardiology Clinic */}
+              <div className="space-y-4">
+                <h3 className="text-2xl font-bold text-[#1B4332]">
+                  GP Specialist Cardiology Clinic
+                </h3>
+                <div className="grid md:grid-cols-2 gap-5">
+                  <div className="bg-white border border-[#E5E7EB] rounded-2xl p-6 space-y-2">
+                    <h4 className="font-semibold text-[#1B4332]">
+                      Telephone Cardiology Consultation
+                    </h4>
+                    <p className="text-sm text-[#52606D]">
+                      Remote specialist review, advice, and management planning.
+                    </p>
+                  </div>
+                  <div className="bg-white border border-[#E5E7EB] rounded-2xl p-6 space-y-2">
+                    <h4 className="font-semibold text-[#1B4332]">
+                      Face-to-Face Cardiology Consultation
+                    </h4>
+                    <p className="text-sm text-[#52606D]">
+                      Comprehensive heart assessment with specialist recommendations.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Medical Letters and Prescriptions */}
+              <div className="space-y-4">
+                <h3 className="text-2xl font-bold text-[#1B4332]">
+                  Medical Letters and Prescriptions
+                </h3>
+                <div className="grid md:grid-cols-3 gap-5">
+                  {MEDICAL_LETTERS_PRICES.map((item) => (
+                    <div
+                      key={item.title}
+                      className="bg-white border border-[#E5E7EB] rounded-2xl p-6 space-y-2"
+                    >
+                      <div className="flex items-start justify-between gap-3">
+                        <h4 className="font-semibold text-[#1B4332]">{item.title}</h4>
+                        <span className="text-lg font-bold text-[#1E4D3B] shrink-0">
+                          {item.price}
+                        </span>
+                      </div>
+                      <p className="text-sm text-[#52606D]">{item.desc}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Diagnostics and Screening */}
+              <div className="space-y-4">
+                <h3 className="text-2xl font-bold text-[#1B4332]">Diagnostics and Screening</h3>
+                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                  {DIAGNOSTICS_ITEMS.map((item) => (
+                    <div
+                      key={item.title}
+                      className="bg-white border border-[#E5E7EB] rounded-2xl p-6 space-y-2"
+                    >
+                      <h4 className="font-semibold text-[#1B4332]">{item.title}</h4>
+                      <p className="text-sm text-[#52606D]">{item.desc}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Cultures */}
+              <div className="space-y-4">
+                <h3 className="text-2xl font-bold text-[#1B4332]">Cultures</h3>
+                <div className="grid md:grid-cols-3 gap-5">
+                  {CULTURES_ITEMS.map((item) => (
+                    <div
+                      key={item.title}
+                      className="bg-white border border-[#E5E7EB] rounded-2xl p-6 space-y-2"
+                    >
+                      <h4 className="font-semibold text-[#1B4332]">{item.title}</h4>
+                      <p className="text-sm text-[#52606D]">{item.desc}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Vision & CTA */}
               <div className="bg-[#1B4332] text-white rounded-3xl p-8 sm:p-12 flex flex-col sm:flex-row items-center justify-between gap-6">
                 <div>
-                  <h2 className="text-2xl font-bold">Ready to book your consultation?</h2>
+                  <h2 className="text-2xl font-bold">
+                    Our Vision is simple: to help you feel well, stay well, and live well.
+                  </h2>
                   <p className="text-[#D8E6DF] mt-1">
                     Same-day appointments available Monday – Friday, 8:00AM – 8:00PM.
                   </p>
@@ -743,8 +1150,8 @@ export default function App() {
                   Book Now
                 </a>
               </div>
-            </div>
-          </section>
+            </section>
+          </div>
         )}
 
         {/* About Page */}
