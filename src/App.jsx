@@ -1156,34 +1156,143 @@ export default function App() {
 
         {/* About Page */}
         {currentPage === 'about' && (
-          <section className="py-16 sm:py-20">
-            <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-              <div className="grid md:grid-cols-2 gap-10 items-center">
-                <div className="space-y-4">
+          <div className="py-16 sm:py-20 space-y-16">
+            {/* Dr Loretta Shoderu */}
+            <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="grid lg:grid-cols-12 gap-12 items-start">
+                <div className="lg:col-span-7 space-y-5">
                   <p className="text-xs font-semibold uppercase tracking-widest text-[#C89D54]">
-                    About Us
+                    About
                   </p>
-                  <h1 className="text-4xl font-bold text-[#1B4332]">JesPearl Private GP Clinic</h1>
+                  <h1 className="text-4xl sm:text-5xl font-bold text-[#1B4332]">
+                    Dr Loretta Shoderu
+                  </h1>
+                  <p className="text-sm font-semibold text-[#1E4D3B] tracking-wide">
+                    BSc., MBChB, MRCGP (2017), PG Dip. Cardiol
+                  </p>
                   <p className="text-[#52606D] leading-relaxed">
-                    Based in Worcester, JesPearl Private GP Clinic was established to give patients
-                    fast, reliable access to an experienced GP without long waiting times.
+                    Dr Loretta Shoderu is an experienced GP with almost 20 years of medical
+                    experience and nearly a decade in frontline GP practice. She trained at the
+                    Royal Free Hospital in London and Southend University Hospital during her
+                    Foundation Years before relocating to the West Midlands to complete her GP
+                    training. Since then, she has worked across multiple practices in South
+                    Worcestershire and Herefordshire, gaining a broad understanding of the
+                    healthcare needs within the region.
                   </p>
                   <p className="text-[#52606D] leading-relaxed">
-                    We believe exceptional healthcare goes beyond treating symptoms. Every
-                    consultation—whether by telephone, face-to-face in our clinic, or via a home
-                    visit—is unhurried, thorough, and centred around your wellbeing.
+                    Alongside her general practice work, Dr Loretta Shoderu has also worked
+                    extensively in Urgent Care and A&E, where she continues to practice as a GP.
+                    She holds a Diploma in Cardiology and has a strong special interest in heart
+                    health, including the management of:
                   </p>
+                  <ul className="grid sm:grid-cols-2 gap-2.5 text-sm text-[#1F2933] pt-1">
+                    {[
+                      'High Blood Pressure (Hypertension)',
+                      'Heart failure',
+                      'Atrial fibrillation (AF, irregular heart beat)',
+                      'Angina',
+                      'Early detection and prevention of heart disease, heart attacks, and stroke',
+                    ].map((item) => (
+                      <li key={item} className="flex items-start gap-2.5">
+                        <CheckCircle2 className="w-4 h-4 text-[#1E4D3B] shrink-0 mt-0.5" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <div className="pt-3">
+                    <button
+                      type="button"
+                      onClick={() => navigate('services')}
+                      className="inline-flex items-center gap-2 bg-[#1E4D3B] hover:bg-[#163A2C] text-white text-sm font-semibold px-6 py-3 rounded-full transition-colors cursor-pointer"
+                    >
+                      Our Services
+                    </button>
+                  </div>
                 </div>
-                <div className="rounded-3xl overflow-hidden shadow-lg border border-[#E5E7EB]">
-                  <img
-                    src={HERO_IMAGE}
-                    alt="JesPearl Private GP Clinic"
-                    className="w-full h-80 object-cover"
-                  />
+
+                <div className="lg:col-span-5">
+                  <div className="rounded-3xl overflow-hidden shadow-lg border border-[#E5E7EB] bg-white">
+                    <img
+                      src={HERO_IMAGE}
+                      alt="Dr Loretta Shoderu - JesPearl Private GP Clinic"
+                      className="w-full h-[380px] sm:h-[440px] object-cover"
+                    />
+                  </div>
                 </div>
               </div>
-            </div>
-          </section>
+            </section>
+
+            {/* Our Approach to Care */}
+            <section className="bg-white border-y border-[#E5E7EB] py-16">
+              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+                <div className="max-w-2xl">
+                  <p className="text-xs font-semibold uppercase tracking-widest text-[#C89D54] mb-2">
+                    Our Approach to Care
+                  </p>
+                  <h2 className="text-3xl font-bold text-[#1B4332]">
+                    At JesPearl Private GP Clinic, we believe exceptional healthcare goes beyond
+                    treating symptoms.
+                  </h2>
+                </div>
+
+                <div className="grid md:grid-cols-2 gap-8">
+                  <div className="bg-[#FAF9F6] border border-[#E5E7EB] rounded-2xl p-8 space-y-3">
+                    <h3 className="text-xl font-bold text-[#1B4332]">
+                      Holistic, Person-Centred Care
+                    </h3>
+                    <p className="text-sm sm:text-base text-[#52606D] leading-relaxed">
+                      We take time to understand your health in the context of your lifestyle, your
+                      work, and your emotional wellbeing, recognising how each factor affects the
+                      other.
+                    </p>
+                  </div>
+                  <div className="bg-[#FAF9F6] border border-[#E5E7EB] rounded-2xl p-8 space-y-3">
+                    <h3 className="text-xl font-bold text-[#1B4332]">
+                      Seamless, High-Quality Service
+                    </h3>
+                    <p className="text-sm sm:text-base text-[#52606D] leading-relaxed">
+                      We provide a{' '}
+                      <strong className="text-[#1F2933]">
+                        bespoke, professional and compassionate service,
+                      </strong>{' '}
+                      ensuring you feel listened to, supported, and empowered in your health
+                      decisions—whether you need a one-off consultation, ongoing care, or specialist
+                      input for heart health.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            {/* Our Mission */}
+            <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="bg-white border border-[#E5E7EB] rounded-3xl p-8 sm:p-12 space-y-6">
+                <h2 className="text-3xl font-bold text-[#1B4332]">Our Mission</h2>
+                <p className="text-[#52606D] leading-relaxed">
+                  At JesPearl Private GP Clinic, our vision is to deliver exceptional,
+                  patient-centred healthcare that is timely, compassionate, and tailored to each
+                  individual. We are committed to:
+                </p>
+                <ul className="space-y-3 text-sm sm:text-base text-[#3E4C59]">
+                  {[
+                    'Providing prompt access to high-quality medical care, without unnecessary delays.',
+                    'Offering a welcoming, attentive service where every patient feels heard, valued, and supported.',
+                    'Combining clinical expertise with holistic understanding, recognising the wider impact of health on family, work, and wellbeing.',
+                    'Empowering patients through clear communication, personalised management plans, and shared decision-making.',
+                    'Ensuring continuity of care with a dedicated Private GP who understands your health journey.',
+                  ].map((item) => (
+                    <li key={item} className="flex items-start gap-3">
+                      <CheckCircle2 className="w-5 h-5 text-[#1E4D3B] shrink-0 mt-0.5" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+                <p className="text-base font-semibold text-[#1B4332] pt-2">
+                  Our Vision is simple: to help you feel well, stay well, and live well.
+                </p>
+              </div>
+            </section>
+          </div>
         )}
 
         {/* Contact Page */}
