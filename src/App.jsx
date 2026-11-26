@@ -12,7 +12,8 @@ import {
   X,
   Star,
   HeartHandshake,
-  ArrowRight,
+  ChevronDown,
+  ShieldCheck,
 } from 'lucide-react'
 
 const BOOKING_URL = 'http://my.thanksdoc.co.uk/book/s/jespearl'
@@ -64,7 +65,7 @@ const CONSULTATION_MODES = [
   {
     icon: MapPin,
     title: 'Based in Worcester',
-    image: HERO_IMAGE,
+    isMap: true,
     description:
       'Conveniently located in Worcester, offering calm, unhurried private medical care in a welcoming clinical setting.',
   },
@@ -106,9 +107,34 @@ const TESTIMONIALS = [
   },
 ]
 
+const FAQS = [
+  {
+    q: 'Do I need to be registered with an NHS GP to book?',
+    a: 'No. You do not need to leave your NHS GP to use our private GP service. You can book a one-off or ongoing consultation with us whenever you need fast access to a doctor.',
+  },
+  {
+    q: 'How quickly can I get an appointment?',
+    a: 'We offer same-day and next-day appointments Monday to Friday between 8:00AM and 8:00PM, subject to availability.',
+  },
+  {
+    q: 'Can you issue private prescriptions and fit notes?',
+    a: 'Yes. Where clinically appropriate, our GP can issue private prescriptions, sick/fit notes, and referral letters to specialists.',
+  },
+  {
+    q: 'Do you offer home visits in Worcester?',
+    a: 'Yes. If you are unable to travel to the clinic or prefer to be seen at home, we offer discreet GP home visits across Worcester and nearby areas.',
+  },
+  {
+    q: 'Is JesPearl Private GP Clinic an emergency service?',
+    a: 'No. We are not an emergency or out-of-hours urgent care service. For life-threatening emergencies, please call 999 or attend your nearest A&E. For urgent NHS medical advice, call 111.',
+  },
+]
+
 export default function App() {
   const [currentPage, setCurrentPage] = useState('home')
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [openFaq, setOpenFaq] = useState(0)
+  const [cookieDismissed, setCookieDismissed] = useState(false)
   const [agreed, setAgreed] = useState(false)
   const [submitted, setSubmitted] = useState(false)
   const [formData, setFormData] = useState({ name: '', email: '', phone: '', message: '' })
@@ -296,7 +322,7 @@ export default function App() {
               </div>
             </section>
 
-            {/* Struggling to get a GP appointment? (with Images + Worcester Map) */}
+            {/* Struggling to get a GP appointment? (Map inside "Based in Worcester" card, images on others) */}
             <section id="consultations" className="py-16 sm:py-20 bg-white border-y border-[#E5E7EB]">
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
                 <div className="max-w-2xl">
@@ -324,12 +350,22 @@ export default function App() {
                         key={mode.title}
                         className="bg-[#FAF9F6] border border-[#E5E7EB] rounded-2xl overflow-hidden flex flex-col hover:border-[#1E4D3B]/40 hover:shadow-md transition-all"
                       >
-                        <div className="h-40 w-full overflow-hidden">
-                          <img
-                            src={mode.image}
-                            alt={mode.title}
-                            className="w-full h-full object-cover"
-                          />
+                        <div className="h-44 w-full overflow-hidden">
+                          {mode.isMap ? (
+                            <iframe
+                              title="Worcester Location Map"
+                              src="https://www.google.com/maps?q=Worcester,UK&output=embed"
+                              className="w-full h-full border-0"
+                              loading="lazy"
+                              referrerPolicy="no-referrer-when-downgrade"
+                            />
+                          ) : (
+                            <img
+                              src={mode.image}
+                              alt={mode.title}
+                              className="w-full h-full object-cover"
+                            />
+                          )}
                         </div>
                         <div className="p-6 flex-1 flex flex-col">
                           <div className="w-10 h-10 rounded-xl bg-[#E8F0EC] text-[#1E4D3B] flex items-center justify-center mb-3">
@@ -345,42 +381,6 @@ export default function App() {
                       </div>
                     )
                   })}
-                </div>
-
-                {/* Worcester Map */}
-                <div className="bg-[#FAF9F6] border border-[#E5E7EB] rounded-3xl overflow-hidden grid lg:grid-cols-12 items-center">
-                  <div className="lg:col-span-5 p-8 sm:p-10 space-y-4">
-                    <div className="inline-flex items-center gap-2 text-[#1E4D3B] text-xs font-semibold uppercase tracking-widest">
-                      <MapPin className="w-4 h-4" />
-                      Our Location
-                    </div>
-                    <h3 className="text-2xl font-bold text-[#1B4332]">
-                      Conveniently Based in Worcester
-                    </h3>
-                    <p className="text-sm sm:text-base text-[#52606D] leading-relaxed">
-                      Visit us in Worcester for face-to-face consultations, or book a telephone
-                      appointment or home visit across the surrounding area.
-                    </p>
-                    <div className="pt-2">
-                      <a
-                        href={BOOKING_URL}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 text-sm font-semibold text-[#1E4D3B] hover:underline"
-                      >
-                        Book an appointment <ArrowRight className="w-4 h-4" />
-                      </a>
-                    </div>
-                  </div>
-                  <div className="lg:col-span-7 h-72 sm:h-80 lg:h-96 w-full">
-                    <iframe
-                      title="JesPearl Private GP Clinic Worcester Map"
-                      src="https://www.google.com/maps?q=Worcester,UK&output=embed"
-                      className="w-full h-full border-0"
-                      loading="lazy"
-                      referrerPolicy="no-referrer-when-downgrade"
-                    />
-                  </div>
                 </div>
               </div>
             </section>
@@ -534,6 +534,50 @@ export default function App() {
               </div>
             </section>
 
+            {/* FAQ Section */}
+            <section id="faq" className="py-16 sm:py-20 bg-[#FAF9F6] border-b border-[#E5E7EB]">
+              <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="text-center mb-10">
+                  <p className="text-xs font-semibold uppercase tracking-widest text-[#C89D54] mb-2">
+                    Frequently Asked Questions
+                  </p>
+                  <h2 className="text-3xl sm:text-4xl font-bold text-[#1B4332]">
+                    Common questions about our clinic
+                  </h2>
+                </div>
+
+                <div className="space-y-3">
+                  {FAQS.map((faq, idx) => {
+                    const isOpen = openFaq === idx
+                    return (
+                      <div
+                        key={faq.q}
+                        className="bg-white border border-[#E5E7EB] rounded-2xl overflow-hidden"
+                      >
+                        <button
+                          type="button"
+                          onClick={() => setOpenFaq(isOpen ? -1 : idx)}
+                          className="w-full px-6 py-4 text-left flex items-center justify-between gap-4 font-semibold text-[#1B4332] cursor-pointer"
+                        >
+                          <span>{faq.q}</span>
+                          <ChevronDown
+                            className={`w-5 h-5 text-[#1E4D3B] shrink-0 transition-transform ${
+                              isOpen ? 'rotate-180' : ''
+                            }`}
+                          />
+                        </button>
+                        {isOpen && (
+                          <div className="px-6 pb-5 text-sm text-[#52606D] leading-relaxed">
+                            {faq.a}
+                          </div>
+                        )}
+                      </div>
+                    )
+                  })}
+                </div>
+              </div>
+            </section>
+
             {/* Get Started / Enquiry */}
             <section className="py-16 sm:py-20">
               <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -623,8 +667,8 @@ export default function App() {
                             className="underline text-[#1E4D3B] hover:text-[#163A2C] cursor-pointer"
                           >
                             collected and stored
-                          </button>
-                          .
+                          </button>{' '}
+                          in accordance with UK GDPR.
                         </span>
                       </label>
 
@@ -792,25 +836,27 @@ export default function App() {
           </section>
         )}
 
-        {/* Privacy Policy Page */}
+        {/* Privacy Policy Page (UK GDPR) */}
         {currentPage === 'privacy' && (
           <section className="py-16 sm:py-20">
-            <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6 bg-white border border-[#E5E7EB] rounded-3xl p-8 sm:p-12">
-              <h1 className="text-3xl font-bold text-[#1B4332]">Privacy Policy</h1>
+            <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 space-y-5 bg-white border border-[#E5E7EB] rounded-3xl p-8 sm:p-12">
+              <h1 className="text-3xl font-bold text-[#1B4332]">Privacy Policy (UK GDPR)</h1>
               <p className="text-sm text-[#52606D] leading-relaxed">
                 JesPearl Private GP Clinic is committed to protecting and respecting your privacy
-                in accordance with UK GDPR and the Data Protection Act 2018.
+                in accordance with the UK General Data Protection Regulation (UK GDPR) and the Data
+                Protection Act 2018.
               </p>
               <h2 className="text-lg font-semibold text-[#1B4332]">Information We Collect</h2>
               <p className="text-sm text-[#52606D] leading-relaxed">
-                We collect personal and clinical information necessary to provide safe, effective
-                private GP consultations, manage appointments, and respond to your enquiries.
+                We collect personal and special category health data necessary to provide safe,
+                effective private GP consultations, manage appointments, and respond to your
+                enquiries.
               </p>
-              <h2 className="text-lg font-semibold text-[#1B4332]">How We Use Your Data</h2>
+              <h2 className="text-lg font-semibold text-[#1B4332]">Your Rights Under UK GDPR</h2>
               <p className="text-sm text-[#52606D] leading-relaxed">
-                Your data is used strictly for delivering medical care, communicating with you
-                regarding your appointments, and fulfilling legal and regulatory obligations. We
-                never sell your personal information to third parties.
+                You have the right to access your medical records, request rectification of
+                inaccurate data, and raise concerns with the Information Commissioner’s Office
+                (ICO) at ico.org.uk.
               </p>
             </div>
           </section>
@@ -819,11 +865,12 @@ export default function App() {
         {/* Terms & Conditions Page */}
         {currentPage === 'terms' && (
           <section className="py-16 sm:py-20">
-            <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6 bg-white border border-[#E5E7EB] rounded-3xl p-8 sm:p-12">
+            <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 space-y-5 bg-white border border-[#E5E7EB] rounded-3xl p-8 sm:p-12">
               <h1 className="text-3xl font-bold text-[#1B4332]">Terms & Conditions</h1>
               <p className="text-sm text-[#52606D] leading-relaxed">
                 By booking an appointment or using the services of JesPearl Private GP Clinic, you
-                agree to the following terms and conditions.
+                agree to the following terms and conditions governed by the laws of England and
+                Wales.
               </p>
               <h2 className="text-lg font-semibold text-[#1B4332]">Appointments & Cancellations</h2>
               <p className="text-sm text-[#52606D] leading-relaxed">
@@ -834,14 +881,28 @@ export default function App() {
               <p className="text-sm text-[#52606D] leading-relaxed">
                 JesPearl Private GP Clinic is not an emergency service. In the event of a
                 life-threatening medical emergency, please call 999 or attend your nearest A&E
-                department immediately.
+                department immediately. For urgent NHS advice, call 111.
+              </p>
+            </div>
+          </section>
+        )}
+
+        {/* Cookie Policy Page (UK PECR) */}
+        {currentPage === 'cookies' && (
+          <section className="py-16 sm:py-20">
+            <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 space-y-5 bg-white border border-[#E5E7EB] rounded-3xl p-8 sm:p-12">
+              <h1 className="text-3xl font-bold text-[#1B4332]">Cookie Policy</h1>
+              <p className="text-sm text-[#52606D] leading-relaxed">
+                In accordance with the UK Privacy and Electronic Communications Regulations (PECR),
+                this website uses only essential functional cookies required for navigation and
+                security. We do not use intrusive advertising or third-party tracking cookies.
               </p>
             </div>
           </section>
         )}
       </main>
 
-      {/* Footer with Quick Links & Terms and Conditions */}
+      {/* Footer with Quick Links, Legal & UK Emergency Notice */}
       <footer className="bg-[#1B4332] text-[#D8E6DF] py-14">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 pb-10 border-b border-white/15">
@@ -912,7 +973,7 @@ export default function App() {
 
             <div>
               <h3 className="text-sm font-semibold uppercase tracking-wider text-white mb-4">
-                Legal
+                Legal (UK)
               </h3>
               <ul className="space-y-2.5 text-sm">
                 <li>
@@ -930,7 +991,16 @@ export default function App() {
                     onClick={() => navigate('privacy')}
                     className="hover:text-white transition-colors cursor-pointer"
                   >
-                    Privacy Policy
+                    Privacy Policy (UK GDPR)
+                  </button>
+                </li>
+                <li>
+                  <button
+                    type="button"
+                    onClick={() => navigate('cookies')}
+                    className="hover:text-white transition-colors cursor-pointer"
+                  >
+                    Cookie Policy
                   </button>
                 </li>
               </ul>
@@ -940,9 +1010,13 @@ export default function App() {
               <h3 className="text-sm font-semibold uppercase tracking-wider text-white mb-4">
                 Clinic Hours
               </h3>
-              <p className="text-sm">Worcester, UK</p>
+              <p className="text-sm">Worcester, United Kingdom</p>
               <p className="text-sm mt-1">Monday – Friday</p>
               <p className="text-sm">8:00AM — 8:00PM</p>
+              <p className="text-xs text-[#D8E6DF]/80 mt-3">
+                Not an emergency service. Call <strong>999</strong> for emergencies or{' '}
+                <strong>111</strong> for urgent NHS advice.
+              </p>
             </div>
           </div>
 
@@ -959,6 +1033,33 @@ export default function App() {
           </div>
         </div>
       </footer>
+
+      {/* UK Cookie Consent Banner */}
+      {!cookieDismissed && (
+        <div className="fixed bottom-4 left-4 right-4 z-50 max-w-xl mx-auto bg-white border border-[#D8E6DF] rounded-2xl shadow-lg p-4 sm:p-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <div className="flex items-start gap-3 text-xs sm:text-sm text-[#3E4C59]">
+            <ShieldCheck className="w-5 h-5 text-[#1E4D3B] shrink-0 mt-0.5" />
+            <p>
+              We use essential cookies to ensure this site works properly. See our{' '}
+              <button
+                type="button"
+                onClick={() => navigate('cookies')}
+                className="underline font-semibold text-[#1E4D3B] cursor-pointer"
+              >
+                Cookie Policy
+              </button>
+              .
+            </p>
+          </div>
+          <button
+            type="button"
+            onClick={() => setCookieDismissed(true)}
+            className="bg-[#1E4D3B] hover:bg-[#163A2C] text-white text-xs font-semibold px-4 py-2 rounded-full shrink-0 cursor-pointer"
+          >
+            Accept
+          </button>
+        </div>
+      )}
     </div>
   )
 }
