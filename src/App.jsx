@@ -1213,7 +1213,7 @@ export default function App() {
                 <div className="lg:col-span-5">
                   <div className="rounded-3xl overflow-hidden shadow-lg border border-[#E5E7EB] bg-white">
                     <img
-                      src="https://mlbkrchhogqb.i.optimole.com/w:615/h:810/q:mauto/f:best/https://jpprivategp.co.uk/wp-content/uploads/2025/10/custom-img-11-copyright.jpg"
+                      src="/about-us-page.webp"
                       alt="Dr Loretta Shoderu - JesPearl Private GP Clinic"
                       className="w-full h-[420px] sm:h-[480px] object-cover object-top"
                     />
