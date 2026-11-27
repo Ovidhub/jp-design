@@ -573,7 +573,7 @@ export default function App() {
             </section>
 
             {/* Services Section */}
-            <section id="services" className="py-16 sm:py-20">
+            <section id="services" className="py-16 sm:py-20 bg-[#EAF2EE]/60">
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid lg:grid-cols-12 gap-12 items-center">
                   <div className="lg:col-span-6 space-y-6">
@@ -862,7 +862,7 @@ export default function App() {
                       <div className="pt-2 flex flex-wrap items-center justify-between gap-4">
                         <button
                           type="submit"
-                          className="inline-flex items-center justify-center bg-[#4E7A69] hover:bg-[#35584A] text-white text-sm font-semibold px-7 py-3 rounded-full transition-colors cursor-pointer"
+                          className="inline-flex items-center justify-center bg-[#E08E6D] hover:bg-[#D17B59] text-white text-sm font-semibold px-7 py-3 rounded-full transition-colors cursor-pointer"
                         >
                           Send Enquiry
                         </button>
