@@ -766,9 +766,13 @@ export default function App() {
             </section>
 
             {/* Get Started / Enquiry */}
-            <section className="py-16 sm:py-20">
-              <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="bg-white border border-[#E5E7EB] rounded-3xl p-8 sm:p-12 shadow-sm">
+            <section
+              className="relative py-16 sm:py-20 bg-cover bg-center"
+              style={{ backgroundImage: "url('/get-started-bg.jpg')" }}
+            >
+              <div className="absolute inset-0 bg-[#F9FBF9]/55" />
+              <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="bg-white/95 backdrop-blur-sm border border-[#E5E7EB] rounded-3xl p-8 sm:p-12 shadow-lg">
                   <div className="text-center max-w-xl mx-auto mb-8">
                     <div className="inline-flex items-center gap-2 text-[#6F9E8B] text-xs font-semibold uppercase tracking-widest mb-2">
                       <HeartHandshake className="w-4 h-4" />
