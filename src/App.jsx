@@ -888,24 +888,35 @@ export default function App() {
           <div className="py-16 sm:py-20 space-y-20">
             {/* Hero */}
             <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-              <div className="max-w-3xl">
-                <p className="text-xs font-semibold uppercase tracking-widest text-[#E08E6D] mb-2">
+              <div className="text-center max-w-3xl mx-auto space-y-4">
+                <p className="text-xs font-semibold uppercase tracking-widest text-[#E08E6D]">
                   JesPearl Private GP Clinic
                 </p>
-                <h1 className="text-4xl sm:text-5xl font-bold text-[#E08E6D]">
+                <h1 className="text-4xl sm:text-5xl font-bold text-[#6F9E8B]">
                   Our Services and Fees
                 </h1>
-                <p className="mt-4 text-lg text-[#52606D] leading-relaxed">
+                <p className="text-lg text-[#52606D] leading-relaxed">
                   A comprehensive range of private GP, cardiology, and diagnostic services, offering
                   timely access to care with clear and upfront pricing.
                 </p>
+                <div className="pt-2">
+                  <a
+                    href={BOOKING_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 bg-[#6F9E8B] hover:bg-[#5C8A77] text-white text-sm font-semibold px-6 py-3 rounded-full shadow-sm transition-colors"
+                  >
+                    <Calendar className="w-4 h-4" />
+                    Book an Appointment
+                  </a>
+                </div>
               </div>
 
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {SERVICE_CATEGORIES.map((cat) => (
                   <div
                     key={cat.title}
-                    className="bg-white border border-[#E5E7EB] rounded-2xl p-6 flex flex-col justify-between space-y-5 hover:border-[#6F9E8B]/40 transition-colors"
+                    className="bg-white border border-[#E5E7EB] border-t-4 border-t-[#6F9E8B] rounded-2xl p-6 flex flex-col justify-between space-y-5 shadow-sm hover:shadow-md transition-all"
                   >
                     <div className="space-y-3">
                       <h2 className="text-lg font-bold text-[#6F9E8B]">{cat.title}</h2>
@@ -921,7 +932,7 @@ export default function App() {
                     <button
                       type="button"
                       onClick={() => navigate('about')}
-                      className="text-sm font-semibold text-[#6F9E8B] hover:underline text-left cursor-pointer"
+                      className="text-sm font-semibold text-[#E08E6D] hover:underline text-left cursor-pointer"
                     >
                       Learn More →
                     </button>
