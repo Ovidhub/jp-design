@@ -547,11 +547,11 @@ export default function App() {
                               referrerPolicy="no-referrer-when-downgrade"
                             />
                           ) : (
-                            <img
-                              src={mode.image}
-                              alt={mode.title}
-                              className="w-full h-full object-cover"
-                            />
+                            <div className="w-full h-full bg-gradient-to-br from-[#EAF2EE] via-[#F4F8F6] to-[#FDF4F0] flex items-center justify-center">
+                              <div className="w-16 h-16 rounded-2xl bg-white/90 border border-[#D2E2DA] shadow-sm flex items-center justify-center text-[#6F9E8B]">
+                                <Icon className="w-8 h-8" />
+                              </div>
+                            </div>
                           )}
                         </div>
                         <div className="p-6 flex-1 flex flex-col bg-[#6F9E8B] text-white">
