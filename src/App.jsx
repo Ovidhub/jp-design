@@ -371,8 +371,8 @@ export default function App() {
                 onClick={() => navigate(item.id)}
                 className={`transition-colors cursor-pointer ${
                   currentPage === item.id
-                    ? 'text-[#4E7A69] font-semibold'
-                    : 'hover:text-[#4E7A69]'
+                    ? 'text-[#6F9E8B] font-semibold'
+                    : 'hover:text-[#6F9E8B]'
                 }`}
               >
                 {item.label}
@@ -385,7 +385,7 @@ export default function App() {
               href={BOOKING_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-[#4E7A69] hover:bg-[#35584A] text-white text-sm font-semibold px-5 py-2.5 rounded-full transition-colors shadow-sm"
+              className="inline-flex items-center gap-2 bg-[#6F9E8B] hover:bg-[#5C8A77] text-white text-sm font-semibold px-5 py-2.5 rounded-full transition-colors shadow-sm"
             >
               <Calendar className="w-4 h-4" />
               Book Now
@@ -395,7 +395,7 @@ export default function App() {
           <button
             type="button"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden p-2 rounded-lg text-[#4E7A69] hover:bg-[#EAF2EE]"
+            className="md:hidden p-2 rounded-lg text-[#6F9E8B] hover:bg-[#EAF2EE]"
             aria-label="Toggle menu"
           >
             {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -414,7 +414,7 @@ export default function App() {
                 key={item.id}
                 type="button"
                 onClick={() => navigate(item.id)}
-                className="block w-full text-left py-2 text-base font-medium text-[#3E4C59] hover:text-[#4E7A69]"
+                className="block w-full text-left py-2 text-base font-medium text-[#3E4C59] hover:text-[#6F9E8B]"
               >
                 {item.label}
               </button>
@@ -423,7 +423,7 @@ export default function App() {
               href={BOOKING_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full inline-flex items-center justify-center gap-2 bg-[#4E7A69] text-white text-sm font-semibold px-5 py-3 rounded-full mt-2"
+              className="w-full inline-flex items-center justify-center gap-2 bg-[#6F9E8B] text-white text-sm font-semibold px-5 py-3 rounded-full mt-2"
             >
               <Calendar className="w-4 h-4" />
               Book Now
@@ -440,12 +440,12 @@ export default function App() {
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid lg:grid-cols-12 gap-10 lg:gap-12 items-center">
                   <div className="lg:col-span-6 space-y-6">
-                    <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EAF2EE] text-[#4E7A69] text-xs font-semibold tracking-wide uppercase">
+                    <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EAF2EE] text-[#6F9E8B] text-xs font-semibold tracking-wide uppercase">
                       <MapPin className="w-3.5 h-3.5" />
                       Worcester Private GP Clinic
                     </div>
 
-                    <h1 className="text-4xl sm:text-5xl lg:text-[3.35rem] font-bold text-[#3D6354] leading-[1.12] tracking-tight">
+                    <h1 className="text-4xl sm:text-5xl lg:text-[3.35rem] font-bold text-[#6F9E8B] leading-[1.12] tracking-tight">
                       Same-day private GP appointments
                     </h1>
 
@@ -454,7 +454,7 @@ export default function App() {
                       medical care, without the long waits.
                     </p>
 
-                    <div className="flex flex-wrap items-center gap-3 text-sm font-medium text-[#4E7A69]">
+                    <div className="flex flex-wrap items-center gap-3 text-sm font-medium text-[#6F9E8B]">
                       <span className="inline-flex items-center gap-1.5 bg-white border border-[#D2E2DA] px-3.5 py-1.5 rounded-full">
                         <Phone className="w-4 h-4" /> Telephone
                       </span>
@@ -468,11 +468,11 @@ export default function App() {
 
                     <div className="bg-white border border-[#E2E8F0] rounded-2xl p-6 shadow-sm max-w-md space-y-4">
                       <div>
-                        <h2 className="text-lg font-semibold text-[#3D6354]">
+                        <h2 className="text-lg font-semibold text-[#6F9E8B]">
                           Your Private GP consultation
                         </h2>
                         <div className="mt-2 flex items-center gap-2 text-sm text-[#52606D]">
-                          <Clock className="w-4 h-4 text-[#4E7A69]" />
+                          <Clock className="w-4 h-4 text-[#6F9E8B]" />
                           <span>Monday – Friday · 8:00AM — 8:00PM</span>
                         </div>
                       </div>
@@ -481,14 +481,14 @@ export default function App() {
                           href={BOOKING_URL}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center justify-center gap-2 bg-[#4E7A69] hover:bg-[#35584A] text-white text-sm font-semibold px-6 py-3 rounded-full transition-colors"
+                          className="inline-flex items-center justify-center gap-2 bg-[#6F9E8B] hover:bg-[#5C8A77] text-white text-sm font-semibold px-6 py-3 rounded-full transition-colors"
                         >
                           Book Now
                         </a>
                         <button
                           type="button"
                           onClick={() => navigate('services')}
-                          className="inline-flex items-center justify-center gap-2 bg-[#EAF2EE] hover:bg-[#D2E2DA] text-[#4E7A69] text-sm font-semibold px-6 py-3 rounded-full transition-colors cursor-pointer"
+                          className="inline-flex items-center justify-center gap-2 bg-[#EAF2EE] hover:bg-[#D2E2DA] text-[#6F9E8B] text-sm font-semibold px-6 py-3 rounded-full transition-colors cursor-pointer"
                         >
                           Explore Services
                         </button>
@@ -516,7 +516,7 @@ export default function App() {
                   <p className="text-xs font-semibold uppercase tracking-widest text-[#E08E6D] mb-2">
                     Personalised Primary Care
                   </p>
-                  <h2 className="text-3xl sm:text-4xl font-bold text-[#3D6354]">
+                  <h2 className="text-3xl sm:text-4xl font-bold text-[#6F9E8B]">
                     Struggling to get a GP appointment?
                   </h2>
                   <p className="mt-4 text-base sm:text-lg text-[#52606D] leading-relaxed">
@@ -535,7 +535,7 @@ export default function App() {
                     return (
                       <div
                         key={mode.title}
-                        className="bg-[#FAF9F6] border border-[#E5E7EB] rounded-2xl overflow-hidden flex flex-col hover:border-[#4E7A69]/40 hover:shadow-md transition-all"
+                        className="bg-[#FAF9F6] border border-[#E5E7EB] rounded-2xl overflow-hidden flex flex-col hover:border-[#6F9E8B]/40 hover:shadow-md transition-all"
                       >
                         <div className="h-44 w-full overflow-hidden">
                           {mode.isMap ? (
@@ -554,7 +554,7 @@ export default function App() {
                             />
                           )}
                         </div>
-                        <div className="p-6 flex-1 flex flex-col bg-[#3D6354] text-white">
+                        <div className="p-6 flex-1 flex flex-col bg-[#6F9E8B] text-white">
                           <div className="w-10 h-10 rounded-xl bg-white/15 text-white flex items-center justify-center mb-3">
                             <Icon className="w-5 h-5" />
                           </div>
@@ -580,7 +580,7 @@ export default function App() {
                     <p className="text-xs font-semibold uppercase tracking-widest text-[#E08E6D]">
                       Comprehensive Care
                     </p>
-                    <h2 className="text-3xl sm:text-4xl font-bold text-[#3D6354] leading-tight">
+                    <h2 className="text-3xl sm:text-4xl font-bold text-[#6F9E8B] leading-tight">
                       Our services cover the wide range of general practice, including:
                     </h2>
 
@@ -590,7 +590,7 @@ export default function App() {
                           key={service.name}
                           className="flex items-center gap-3 bg-white border border-[#E5E7EB] rounded-xl px-4 py-3 text-sm font-medium text-[#1F2933]"
                         >
-                          <CheckCircle2 className="w-4 h-4 text-[#4E7A69] shrink-0" />
+                          <CheckCircle2 className="w-4 h-4 text-[#6F9E8B] shrink-0" />
                           <span>{service.name}</span>
                         </li>
                       ))}
@@ -601,7 +601,7 @@ export default function App() {
                         href={BOOKING_URL}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 bg-[#4E7A69] hover:bg-[#35584A] text-white text-sm font-semibold px-7 py-3.5 rounded-full transition-colors shadow-sm"
+                        className="inline-flex items-center gap-2 bg-[#6F9E8B] hover:bg-[#5C8A77] text-white text-sm font-semibold px-7 py-3.5 rounded-full transition-colors shadow-sm"
                       >
                         <Calendar className="w-4 h-4" />
                         Book a Session
@@ -609,7 +609,7 @@ export default function App() {
                       <button
                         type="button"
                         onClick={() => navigate('services')}
-                        className="inline-flex items-center gap-2 bg-white border border-[#D2E2DA] hover:bg-[#EAF2EE] text-[#4E7A69] text-sm font-semibold px-6 py-3.5 rounded-full transition-colors cursor-pointer"
+                        className="inline-flex items-center gap-2 bg-white border border-[#D2E2DA] hover:bg-[#EAF2EE] text-[#6F9E8B] text-sm font-semibold px-6 py-3.5 rounded-full transition-colors cursor-pointer"
                       >
                         View All Services
                       </button>
@@ -630,7 +630,7 @@ export default function App() {
             </section>
 
             {/* Clinical Trust Bar */}
-            <section className="py-12 bg-[#3D6354] text-white">
+            <section className="py-12 bg-[#6F9E8B] text-white">
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
                   <div className="space-y-1">
@@ -676,7 +676,7 @@ export default function App() {
                         <Star key={i} className="w-4 h-4 fill-current" />
                       ))}
                     </div>
-                    <h2 className="text-2xl sm:text-3xl font-bold text-[#3D6354]">
+                    <h2 className="text-2xl sm:text-3xl font-bold text-[#6F9E8B]">
                       We look forward to your review of our services.
                     </h2>
                     <p className="text-[#52606D] text-sm sm:text-base leading-relaxed">
@@ -710,7 +710,7 @@ export default function App() {
                             className="w-12 h-12 rounded-full object-cover border border-[#D2E2DA]"
                           />
                           <div>
-                            <div className="font-semibold text-[#3D6354]">{item.name}</div>
+                            <div className="font-semibold text-[#6F9E8B]">{item.name}</div>
                             <div className="text-xs text-[#52606D]">Verified Patient</div>
                           </div>
                         </div>
@@ -739,12 +739,12 @@ export default function App() {
                     return (
                       <div
                         key={faq.q}
-                        className="bg-white border border-[#35584A] rounded-2xl overflow-hidden"
+                        className="bg-white border border-[#5C8A77] rounded-2xl overflow-hidden"
                       >
                         <button
                           type="button"
                           onClick={() => setOpenFaq(isOpen ? -1 : idx)}
-                          className="w-full px-6 py-4 text-left flex items-center justify-between gap-4 font-semibold bg-[#3D6354] text-white cursor-pointer"
+                          className="w-full px-6 py-4 text-left flex items-center justify-between gap-4 font-semibold bg-[#6F9E8B] text-white cursor-pointer"
                         >
                           <span>{faq.q}</span>
                           <ChevronDown
@@ -770,11 +770,11 @@ export default function App() {
               <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="bg-white border border-[#E5E7EB] rounded-3xl p-8 sm:p-12 shadow-sm">
                   <div className="text-center max-w-xl mx-auto mb-8">
-                    <div className="inline-flex items-center gap-2 text-[#4E7A69] text-xs font-semibold uppercase tracking-widest mb-2">
+                    <div className="inline-flex items-center gap-2 text-[#6F9E8B] text-xs font-semibold uppercase tracking-widest mb-2">
                       <HeartHandshake className="w-4 h-4" />
                       Get Started
                     </div>
-                    <h2 className="text-2xl sm:text-3xl font-bold text-[#3D6354]">
+                    <h2 className="text-2xl sm:text-3xl font-bold text-[#6F9E8B]">
                       We believe exceptional healthcare goes beyond treating symptoms.
                     </h2>
                     <p className="mt-3 text-sm sm:text-base text-[#52606D]">
@@ -785,8 +785,8 @@ export default function App() {
 
                   {submitted ? (
                     <div className="bg-[#EAF2EE] border border-[#D2E2DA] rounded-2xl p-6 text-center space-y-2">
-                      <CheckCircle2 className="w-8 h-8 text-[#4E7A69] mx-auto" />
-                      <h3 className="text-lg font-semibold text-[#3D6354]">
+                      <CheckCircle2 className="w-8 h-8 text-[#6F9E8B] mx-auto" />
+                      <h3 className="text-lg font-semibold text-[#6F9E8B]">
                         Thank you for reaching out
                       </h3>
                       <p className="text-sm text-[#3E4C59]">
@@ -796,7 +796,7 @@ export default function App() {
                           href={BOOKING_URL}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="underline font-semibold text-[#4E7A69]"
+                          className="underline font-semibold text-[#6F9E8B]"
                         >
                           online booking portal
                         </a>
@@ -812,7 +812,7 @@ export default function App() {
                           placeholder="Full Name"
                           value={formData.name}
                           onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                          className="w-full rounded-xl border border-[#D1D5DB] px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#4E7A69]"
+                          className="w-full rounded-xl border border-[#D1D5DB] px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#6F9E8B]"
                         />
                         <input
                           type="email"
@@ -820,7 +820,7 @@ export default function App() {
                           placeholder="Email Address"
                           value={formData.email}
                           onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                          className="w-full rounded-xl border border-[#D1D5DB] px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#4E7A69]"
+                          className="w-full rounded-xl border border-[#D1D5DB] px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#6F9E8B]"
                         />
                       </div>
                       <input
@@ -828,7 +828,7 @@ export default function App() {
                         placeholder="Phone Number (optional)"
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                        className="w-full rounded-xl border border-[#D1D5DB] px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#4E7A69]"
+                        className="w-full rounded-xl border border-[#D1D5DB] px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#6F9E8B]"
                       />
                       <textarea
                         rows={3}
@@ -836,7 +836,7 @@ export default function App() {
                         placeholder="How can we help you?"
                         value={formData.message}
                         onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                        className="w-full rounded-xl border border-[#D1D5DB] px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#4E7A69]"
+                        className="w-full rounded-xl border border-[#D1D5DB] px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#6F9E8B]"
                       />
                       <label className="flex items-start gap-2.5 text-xs sm:text-sm text-[#52606D] cursor-pointer">
                         <input
@@ -844,14 +844,14 @@ export default function App() {
                           required
                           checked={agreed}
                           onChange={(e) => setAgreed(e.target.checked)}
-                          className="mt-1 rounded border-[#D1D5DB] text-[#4E7A69] focus:ring-[#4E7A69]"
+                          className="mt-1 rounded border-[#D1D5DB] text-[#6F9E8B] focus:ring-[#6F9E8B]"
                         />
                         <span>
                           I agree that my submitted data is being{' '}
                           <button
                             type="button"
                             onClick={() => navigate('privacy')}
-                            className="underline text-[#4E7A69] hover:text-[#35584A] cursor-pointer"
+                            className="underline text-[#6F9E8B] hover:text-[#5C8A77] cursor-pointer"
                           >
                             collected and stored
                           </button>{' '}
@@ -870,7 +870,7 @@ export default function App() {
                           href={BOOKING_URL}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-sm font-semibold text-[#4E7A69] hover:underline"
+                          className="text-sm font-semibold text-[#6F9E8B] hover:underline"
                         >
                           Or book a consultation directly →
                         </a>
@@ -905,14 +905,14 @@ export default function App() {
                 {SERVICE_CATEGORIES.map((cat) => (
                   <div
                     key={cat.title}
-                    className="bg-white border border-[#E5E7EB] rounded-2xl p-6 flex flex-col justify-between space-y-5 hover:border-[#4E7A69]/40 transition-colors"
+                    className="bg-white border border-[#E5E7EB] rounded-2xl p-6 flex flex-col justify-between space-y-5 hover:border-[#6F9E8B]/40 transition-colors"
                   >
                     <div className="space-y-3">
-                      <h2 className="text-lg font-bold text-[#3D6354]">{cat.title}</h2>
+                      <h2 className="text-lg font-bold text-[#6F9E8B]">{cat.title}</h2>
                       <ul className="space-y-2 text-sm text-[#52606D]">
                         {cat.items.map((item) => (
                           <li key={item} className="flex items-start gap-2">
-                            <CheckCircle2 className="w-4 h-4 text-[#4E7A69] shrink-0 mt-0.5" />
+                            <CheckCircle2 className="w-4 h-4 text-[#6F9E8B] shrink-0 mt-0.5" />
                             <span>{item}</span>
                           </li>
                         ))}
@@ -921,7 +921,7 @@ export default function App() {
                     <button
                       type="button"
                       onClick={() => navigate('about')}
-                      className="text-sm font-semibold text-[#4E7A69] hover:underline text-left cursor-pointer"
+                      className="text-sm font-semibold text-[#6F9E8B] hover:underline text-left cursor-pointer"
                     >
                       Learn More →
                     </button>
@@ -937,7 +937,7 @@ export default function App() {
                   <p className="text-xs font-semibold uppercase tracking-widest text-[#E08E6D]">
                     For Organisations
                   </p>
-                  <h2 className="text-3xl font-bold text-[#3D6354]">
+                  <h2 className="text-3xl font-bold text-[#6F9E8B]">
                     Corporate Healthcare Service
                   </h2>
                   <p className="text-[#52606D] leading-relaxed">
@@ -951,7 +951,7 @@ export default function App() {
                     care—offering fast GP access, efficient referrals, prescription support, and
                     tailored health advice.
                   </p>
-                  <p className="text-sm font-semibold text-[#3D6354] pt-2">
+                  <p className="text-sm font-semibold text-[#6F9E8B] pt-2">
                     By prioritising employee wellbeing, we help employers achieve:
                   </p>
                   <ul className="grid sm:grid-cols-2 gap-2.5 text-sm text-[#3E4C59]">
@@ -962,7 +962,7 @@ export default function App() {
                       'Greater organisational resilience and continuity',
                     ].map((benefit) => (
                       <li key={benefit} className="flex items-center gap-2">
-                        <CheckCircle2 className="w-4 h-4 text-[#4E7A69] shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-[#6F9E8B] shrink-0" />
                         <span>{benefit}</span>
                       </li>
                     ))}
@@ -987,7 +987,7 @@ export default function App() {
             {/* Resources */}
             <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
               <div className="max-w-3xl space-y-3">
-                <h2 className="text-3xl font-bold text-[#3D6354]">Resources</h2>
+                <h2 className="text-3xl font-bold text-[#6F9E8B]">Resources</h2>
                 <p className="text-sm sm:text-base text-[#52606D] leading-relaxed">
                   These calculators offer a simple way to understand potential health risks and
                   overall well-being. They provide general estimates based on the information you
@@ -1003,10 +1003,10 @@ export default function App() {
                     href={calc.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-white border border-[#E5E7EB] hover:border-[#4E7A69] rounded-xl px-5 py-4 text-sm font-semibold text-[#3D6354] flex items-center justify-between transition-colors"
+                    className="bg-white border border-[#E5E7EB] hover:border-[#6F9E8B] rounded-xl px-5 py-4 text-sm font-semibold text-[#6F9E8B] flex items-center justify-between transition-colors"
                   >
                     <span>{calc.name}</span>
-                    <span className="text-[#4E7A69]">↗</span>
+                    <span className="text-[#6F9E8B]">↗</span>
                   </a>
                 ))}
               </div>
@@ -1018,7 +1018,7 @@ export default function App() {
                 <p className="text-xs font-semibold uppercase tracking-widest text-[#E08E6D]">
                   Clear & Upfront Pricing
                 </p>
-                <h2 className="text-3xl sm:text-4xl font-bold text-[#3D6354]">Prices</h2>
+                <h2 className="text-3xl sm:text-4xl font-bold text-[#6F9E8B]">Prices</h2>
                 <p className="text-[#52606D]">
                   Our fees reflect private GP and specialist services delivered promptly and
                   professionally. All prices are inclusive of consultation time and clinical
@@ -1030,7 +1030,7 @@ export default function App() {
 
               {/* GP Consultations */}
               <div className="space-y-4">
-                <h3 className="text-2xl font-bold text-[#3D6354]">GP Consultations</h3>
+                <h3 className="text-2xl font-bold text-[#6F9E8B]">GP Consultations</h3>
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
                   {GP_CONSULTATION_PRICES.map((item) => (
                     <div
@@ -1038,7 +1038,7 @@ export default function App() {
                       className="bg-white border border-[#E5E7EB] rounded-2xl p-6 space-y-2"
                     >
                       <div className="flex items-start justify-between gap-3">
-                        <h4 className="font-semibold text-[#3D6354]">{item.title}</h4>
+                        <h4 className="font-semibold text-[#6F9E8B]">{item.title}</h4>
                         {item.price && (
                           <span className="text-lg font-bold text-[#E08E6D] shrink-0">
                             {item.price}
@@ -1053,12 +1053,12 @@ export default function App() {
 
               {/* GP Specialist Cardiology Clinic */}
               <div className="space-y-4">
-                <h3 className="text-2xl font-bold text-[#3D6354]">
+                <h3 className="text-2xl font-bold text-[#6F9E8B]">
                   GP Specialist Cardiology Clinic
                 </h3>
                 <div className="grid md:grid-cols-2 gap-5">
                   <div className="bg-white border border-[#E5E7EB] rounded-2xl p-6 space-y-2">
-                    <h4 className="font-semibold text-[#3D6354]">
+                    <h4 className="font-semibold text-[#6F9E8B]">
                       Telephone Cardiology Consultation
                     </h4>
                     <p className="text-sm text-[#52606D]">
@@ -1066,7 +1066,7 @@ export default function App() {
                     </p>
                   </div>
                   <div className="bg-white border border-[#E5E7EB] rounded-2xl p-6 space-y-2">
-                    <h4 className="font-semibold text-[#3D6354]">
+                    <h4 className="font-semibold text-[#6F9E8B]">
                       Face-to-Face Cardiology Consultation
                     </h4>
                     <p className="text-sm text-[#52606D]">
@@ -1078,7 +1078,7 @@ export default function App() {
 
               {/* Medical Letters and Prescriptions */}
               <div className="space-y-4">
-                <h3 className="text-2xl font-bold text-[#3D6354]">
+                <h3 className="text-2xl font-bold text-[#6F9E8B]">
                   Medical Letters and Prescriptions
                 </h3>
                 <div className="grid md:grid-cols-3 gap-5">
@@ -1088,7 +1088,7 @@ export default function App() {
                       className="bg-white border border-[#E5E7EB] rounded-2xl p-6 space-y-2"
                     >
                       <div className="flex items-start justify-between gap-3">
-                        <h4 className="font-semibold text-[#3D6354]">{item.title}</h4>
+                        <h4 className="font-semibold text-[#6F9E8B]">{item.title}</h4>
                         <span className="text-lg font-bold text-[#E08E6D] shrink-0">
                           {item.price}
                         </span>
@@ -1101,14 +1101,14 @@ export default function App() {
 
               {/* Diagnostics and Screening */}
               <div className="space-y-4">
-                <h3 className="text-2xl font-bold text-[#3D6354]">Diagnostics and Screening</h3>
+                <h3 className="text-2xl font-bold text-[#6F9E8B]">Diagnostics and Screening</h3>
                 <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
                   {DIAGNOSTICS_ITEMS.map((item) => (
                     <div
                       key={item.title}
                       className="bg-white border border-[#E5E7EB] rounded-2xl p-6 space-y-2"
                     >
-                      <h4 className="font-semibold text-[#3D6354]">{item.title}</h4>
+                      <h4 className="font-semibold text-[#6F9E8B]">{item.title}</h4>
                       <p className="text-sm text-[#52606D]">{item.desc}</p>
                     </div>
                   ))}
@@ -1117,14 +1117,14 @@ export default function App() {
 
               {/* Cultures */}
               <div className="space-y-4">
-                <h3 className="text-2xl font-bold text-[#3D6354]">Cultures</h3>
+                <h3 className="text-2xl font-bold text-[#6F9E8B]">Cultures</h3>
                 <div className="grid md:grid-cols-3 gap-5">
                   {CULTURES_ITEMS.map((item) => (
                     <div
                       key={item.title}
                       className="bg-white border border-[#E5E7EB] rounded-2xl p-6 space-y-2"
                     >
-                      <h4 className="font-semibold text-[#3D6354]">{item.title}</h4>
+                      <h4 className="font-semibold text-[#6F9E8B]">{item.title}</h4>
                       <p className="text-sm text-[#52606D]">{item.desc}</p>
                     </div>
                   ))}
@@ -1132,7 +1132,7 @@ export default function App() {
               </div>
 
               {/* Vision & CTA */}
-              <div className="bg-[#3D6354] text-white rounded-3xl p-8 sm:p-12 flex flex-col sm:flex-row items-center justify-between gap-6">
+              <div className="bg-[#6F9E8B] text-white rounded-3xl p-8 sm:p-12 flex flex-col sm:flex-row items-center justify-between gap-6">
                 <div>
                   <h2 className="text-2xl font-bold">
                     Our Vision is simple: to help you feel well, stay well, and live well.
@@ -1145,7 +1145,7 @@ export default function App() {
                   href={BOOKING_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 bg-white text-[#3D6354] font-semibold px-7 py-3.5 rounded-full hover:bg-[#EAF2EE] transition-colors shrink-0"
+                  className="inline-flex items-center gap-2 bg-white text-[#6F9E8B] font-semibold px-7 py-3.5 rounded-full hover:bg-[#EAF2EE] transition-colors shrink-0"
                 >
                   <Calendar className="w-4 h-4" />
                   Book Now
@@ -1168,7 +1168,7 @@ export default function App() {
                   <h1 className="text-4xl sm:text-5xl font-bold text-[#E08E6D]">
                     Dr Loretta Shoderu
                   </h1>
-                  <p className="text-sm font-semibold text-[#4E7A69] tracking-wide">
+                  <p className="text-sm font-semibold text-[#6F9E8B] tracking-wide">
                     BSc., MBChB, MRCGP (2017), PG Dip. Cardiol
                   </p>
                   <p className="text-[#52606D] leading-relaxed">
@@ -1195,7 +1195,7 @@ export default function App() {
                       'Early detection and prevention of heart disease, heart attacks, and stroke',
                     ].map((item) => (
                       <li key={item} className="flex items-start gap-2.5">
-                        <CheckCircle2 className="w-4 h-4 text-[#4E7A69] shrink-0 mt-0.5" />
+                        <CheckCircle2 className="w-4 h-4 text-[#6F9E8B] shrink-0 mt-0.5" />
                         <span>{item}</span>
                       </li>
                     ))}
@@ -1204,7 +1204,7 @@ export default function App() {
                     <button
                       type="button"
                       onClick={() => navigate('services')}
-                      className="inline-flex items-center gap-2 bg-[#4E7A69] hover:bg-[#35584A] text-white text-sm font-semibold px-6 py-3 rounded-full transition-colors cursor-pointer"
+                      className="inline-flex items-center gap-2 bg-[#6F9E8B] hover:bg-[#5C8A77] text-white text-sm font-semibold px-6 py-3 rounded-full transition-colors cursor-pointer"
                     >
                       Our Services
                     </button>
@@ -1230,7 +1230,7 @@ export default function App() {
                   <p className="text-xs font-semibold uppercase tracking-widest text-[#E08E6D] mb-2">
                     Our Approach to Care
                   </p>
-                  <h2 className="text-3xl font-bold text-[#3D6354]">
+                  <h2 className="text-3xl font-bold text-[#6F9E8B]">
                     At JesPearl Private GP Clinic, we believe exceptional healthcare goes beyond
                     treating symptoms.
                   </h2>
@@ -1238,7 +1238,7 @@ export default function App() {
 
                 <div className="grid md:grid-cols-2 gap-8">
                   <div className="bg-[#FAF9F6] border border-[#E5E7EB] rounded-2xl p-8 space-y-3">
-                    <h3 className="text-xl font-bold text-[#3D6354]">
+                    <h3 className="text-xl font-bold text-[#6F9E8B]">
                       Holistic, Person-Centred Care
                     </h3>
                     <p className="text-sm sm:text-base text-[#52606D] leading-relaxed">
@@ -1248,7 +1248,7 @@ export default function App() {
                     </p>
                   </div>
                   <div className="bg-[#FAF9F6] border border-[#E5E7EB] rounded-2xl p-8 space-y-3">
-                    <h3 className="text-xl font-bold text-[#3D6354]">
+                    <h3 className="text-xl font-bold text-[#6F9E8B]">
                       Seamless, High-Quality Service
                     </h3>
                     <p className="text-sm sm:text-base text-[#52606D] leading-relaxed">
@@ -1268,7 +1268,7 @@ export default function App() {
             {/* Our Mission */}
             <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="bg-white border border-[#E5E7EB] rounded-3xl p-8 sm:p-12 space-y-6">
-                <h2 className="text-3xl font-bold text-[#3D6354]">Our Mission</h2>
+                <h2 className="text-3xl font-bold text-[#6F9E8B]">Our Mission</h2>
                 <p className="text-[#52606D] leading-relaxed">
                   At JesPearl Private GP Clinic, our vision is to deliver exceptional,
                   patient-centred healthcare that is timely, compassionate, and tailored to each
@@ -1283,12 +1283,12 @@ export default function App() {
                     'Ensuring continuity of care with a dedicated Private GP who understands your health journey.',
                   ].map((item) => (
                     <li key={item} className="flex items-start gap-3">
-                      <CheckCircle2 className="w-5 h-5 text-[#4E7A69] shrink-0 mt-0.5" />
+                      <CheckCircle2 className="w-5 h-5 text-[#6F9E8B] shrink-0 mt-0.5" />
                       <span>{item}</span>
                     </li>
                   ))}
                 </ul>
-                <p className="text-base font-semibold text-[#3D6354] pt-2">
+                <p className="text-base font-semibold text-[#6F9E8B] pt-2">
                   Our Vision is simple: to help you feel well, stay well, and live well.
                 </p>
               </div>
@@ -1304,7 +1304,7 @@ export default function App() {
                 <p className="text-xs font-semibold uppercase tracking-widest text-[#E08E6D] mb-2">
                   Contact Us
                 </p>
-                <h1 className="text-4xl font-bold text-[#3D6354]">Get in Touch</h1>
+                <h1 className="text-4xl font-bold text-[#6F9E8B]">Get in Touch</h1>
                 <p className="mt-3 text-[#52606D]">
                   Open Monday – Friday, 8:00AM – 8:00PM in Worcester. Book online or send us an
                   enquiry below.
@@ -1314,16 +1314,16 @@ export default function App() {
               <div className="grid lg:grid-cols-12 gap-8">
                 <div className="lg:col-span-5 space-y-6 bg-white border border-[#E5E7EB] rounded-3xl p-8">
                   <div className="flex items-start gap-3">
-                    <MapPin className="w-5 h-5 text-[#4E7A69] mt-0.5" />
+                    <MapPin className="w-5 h-5 text-[#6F9E8B] mt-0.5" />
                     <div>
-                      <h2 className="font-semibold text-[#3D6354]">Location</h2>
+                      <h2 className="font-semibold text-[#6F9E8B]">Location</h2>
                       <p className="text-sm text-[#52606D]">Worcester, United Kingdom</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
-                    <Clock className="w-5 h-5 text-[#4E7A69] mt-0.5" />
+                    <Clock className="w-5 h-5 text-[#6F9E8B] mt-0.5" />
                     <div>
-                      <h2 className="font-semibold text-[#3D6354]">Opening Hours</h2>
+                      <h2 className="font-semibold text-[#6F9E8B]">Opening Hours</h2>
                       <p className="text-sm text-[#52606D]">Monday – Friday: 8:00AM – 8:00PM</p>
                     </div>
                   </div>
@@ -1332,7 +1332,7 @@ export default function App() {
                       href={BOOKING_URL}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-full inline-flex items-center justify-center gap-2 bg-[#4E7A69] text-white text-sm font-semibold px-6 py-3 rounded-full"
+                      className="w-full inline-flex items-center justify-center gap-2 bg-[#6F9E8B] text-white text-sm font-semibold px-6 py-3 rounded-full"
                     >
                       <Calendar className="w-4 h-4" />
                       Book Online
@@ -1357,19 +1357,19 @@ export default function App() {
         {currentPage === 'privacy' && (
           <section className="py-16 sm:py-20">
             <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 space-y-5 bg-white border border-[#E5E7EB] rounded-3xl p-8 sm:p-12">
-              <h1 className="text-3xl font-bold text-[#3D6354]">Privacy Policy (UK GDPR)</h1>
+              <h1 className="text-3xl font-bold text-[#6F9E8B]">Privacy Policy (UK GDPR)</h1>
               <p className="text-sm text-[#52606D] leading-relaxed">
                 JesPearl Private GP Clinic is committed to protecting and respecting your privacy
                 in accordance with the UK General Data Protection Regulation (UK GDPR) and the Data
                 Protection Act 2018.
               </p>
-              <h2 className="text-lg font-semibold text-[#3D6354]">Information We Collect</h2>
+              <h2 className="text-lg font-semibold text-[#6F9E8B]">Information We Collect</h2>
               <p className="text-sm text-[#52606D] leading-relaxed">
                 We collect personal and special category health data necessary to provide safe,
                 effective private GP consultations, manage appointments, and respond to your
                 enquiries.
               </p>
-              <h2 className="text-lg font-semibold text-[#3D6354]">Your Rights Under UK GDPR</h2>
+              <h2 className="text-lg font-semibold text-[#6F9E8B]">Your Rights Under UK GDPR</h2>
               <p className="text-sm text-[#52606D] leading-relaxed">
                 You have the right to access your medical records, request rectification of
                 inaccurate data, and raise concerns with the Information Commissioner’s Office
@@ -1383,7 +1383,7 @@ export default function App() {
         {currentPage === 'terms' && (
           <section className="py-16 sm:py-20">
             <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 space-y-5 bg-white border border-[#E5E7EB] rounded-3xl p-8 sm:p-12">
-              <h1 className="text-3xl font-bold text-[#3D6354]">Terms & Conditions</h1>
+              <h1 className="text-3xl font-bold text-[#6F9E8B]">Terms & Conditions</h1>
               <p className="text-sm text-[#52606D] leading-relaxed">
                 JesPearl Private GP Clinic is <strong>powered by ThanksDoc</strong> and subscribes
                 to ThanksDoc’s terms and conditions. By booking an appointment or using our
@@ -1392,19 +1392,19 @@ export default function App() {
                   href="https://thanksdoc.co.uk/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="underline font-semibold text-[#4E7A69]"
+                  className="underline font-semibold text-[#6F9E8B]"
                 >
                   ThanksDoc’s Terms and Conditions
                 </a>
                 , governed by the laws of England and Wales.
               </p>
-              <h2 className="text-lg font-semibold text-[#3D6354]">Appointments & Cancellations</h2>
+              <h2 className="text-lg font-semibold text-[#6F9E8B]">Appointments & Cancellations</h2>
               <p className="text-sm text-[#52606D] leading-relaxed">
                 Appointments are available Monday to Friday, 8:00AM – 8:00PM via our ThanksDoc
                 booking portal. Please provide reasonable notice if you need to reschedule or
                 cancel your consultation.
               </p>
-              <h2 className="text-lg font-semibold text-[#3D6354]">Medical Emergencies</h2>
+              <h2 className="text-lg font-semibold text-[#6F9E8B]">Medical Emergencies</h2>
               <p className="text-sm text-[#52606D] leading-relaxed">
                 JesPearl Private GP Clinic is not an emergency service. In the event of a
                 life-threatening medical emergency, please call 999 or attend your nearest A&E
@@ -1418,7 +1418,7 @@ export default function App() {
         {currentPage === 'cookies' && (
           <section className="py-16 sm:py-20">
             <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 space-y-5 bg-white border border-[#E5E7EB] rounded-3xl p-8 sm:p-12">
-              <h1 className="text-3xl font-bold text-[#3D6354]">Cookie Policy</h1>
+              <h1 className="text-3xl font-bold text-[#6F9E8B]">Cookie Policy</h1>
               <p className="text-sm text-[#52606D] leading-relaxed">
                 In accordance with the UK Privacy and Electronic Communications Regulations (PECR),
                 this website uses only essential functional cookies required for navigation and
@@ -1430,25 +1430,39 @@ export default function App() {
       </main>
 
       {/* Footer with Quick Links, Legal & UK Emergency Notice */}
-      <footer className="bg-[#3D6354] text-[#D2E2DA] py-14">
+      <footer className="bg-[#6F9E8B] text-white py-14">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 pb-10 border-b border-white/15">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 pb-10 border-b border-white/25">
             <div className="space-y-4">
               <img
                 src={LOGO_URL}
                 alt="JesPearl Private GP Clinic"
                 className="h-9 w-auto brightness-0 invert"
               />
-              <p className="text-sm text-[#D2E2DA]/90 leading-relaxed">
-                Fast, reliable access to high-quality private GP care in Worcester.
+              <p className="text-base font-semibold text-white">
+                Supporting your path to wellness
               </p>
+              <p className="text-sm text-white/90">
+                Email:{' '}
+                <a href="mailto:info@jpprivategp.co.uk" className="underline hover:text-white">
+                  info@jpprivategp.co.uk
+                </a>
+              </p>
+              <a
+                href="https://wa.me/447775069798?text=Hello%20JesPearl%20Private%20GP%20Clinic"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-white text-[#6F9E8B] font-semibold text-sm px-5 py-2.5 rounded-md hover:bg-[#EAF2EE] transition-colors"
+              >
+                Whatsapp Us
+              </a>
             </div>
 
             <div>
               <h3 className="text-sm font-semibold uppercase tracking-wider text-white mb-4">
                 Quick Links
               </h3>
-              <ul className="space-y-2.5 text-sm">
+              <ul className="space-y-2.5 text-sm text-white/90">
                 <li>
                   <button
                     type="button"
@@ -1482,17 +1496,16 @@ export default function App() {
                     onClick={() => navigate('contact')}
                     className="hover:text-white transition-colors cursor-pointer"
                   >
-                    Contact
+                    Contact Us
                   </button>
                 </li>
                 <li>
                   <a
-                    href={BOOKING_URL}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    href="#faq"
+                    onClick={() => navigate('home')}
                     className="hover:text-white transition-colors"
                   >
-                    Book Now
+                    FAQs
                   </a>
                 </li>
               </ul>
@@ -1502,7 +1515,16 @@ export default function App() {
               <h3 className="text-sm font-semibold uppercase tracking-wider text-white mb-4">
                 Legal (UK)
               </h3>
-              <ul className="space-y-2.5 text-sm">
+              <ul className="space-y-2.5 text-sm text-white/90">
+                <li>
+                  <button
+                    type="button"
+                    onClick={() => navigate('privacy')}
+                    className="hover:text-white transition-colors cursor-pointer"
+                  >
+                    Privacy Policy
+                  </button>
+                </li>
                 <li>
                   <button
                     type="button"
@@ -1515,20 +1537,20 @@ export default function App() {
                 <li>
                   <button
                     type="button"
-                    onClick={() => navigate('privacy')}
-                    className="hover:text-white transition-colors cursor-pointer"
-                  >
-                    Privacy Policy (UK GDPR)
-                  </button>
-                </li>
-                <li>
-                  <button
-                    type="button"
                     onClick={() => navigate('cookies')}
                     className="hover:text-white transition-colors cursor-pointer"
                   >
                     Cookie Policy
                   </button>
+                </li>
+                <li className="pt-2">
+                  <span className="block text-xs text-white/80">For Complaints:</span>
+                  <a
+                    href="mailto:complaints@thanksdoc.co.uk"
+                    className="underline hover:text-white"
+                  >
+                    complaints@thanksdoc.co.uk
+                  </a>
                 </li>
               </ul>
             </div>
@@ -1537,19 +1559,19 @@ export default function App() {
               <h3 className="text-sm font-semibold uppercase tracking-wider text-white mb-4">
                 Clinic Hours
               </h3>
-              <p className="text-sm">Worcester, United Kingdom</p>
-              <p className="text-sm mt-1">Monday – Friday</p>
-              <p className="text-sm">8:00AM — 8:00PM</p>
-              <p className="text-xs text-[#D2E2DA]/80 mt-3">
+              <p className="text-sm text-white/90">Worcester, United Kingdom</p>
+              <p className="text-sm mt-1 text-white/90">Monday – Friday</p>
+              <p className="text-sm text-white/90">8:00AM — 8:00PM</p>
+              <p className="text-xs text-white/80 mt-3">
                 Not an emergency service. Call <strong>999</strong> for emergencies or{' '}
                 <strong>111</strong> for urgent NHS advice.
               </p>
             </div>
           </div>
 
-          <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#D2E2DA]/80">
+          <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/90">
             <p>
-              © {new Date().getFullYear()} JesPearl Private GP Clinic. Powered by{' '}
+              Regulated activity provided by{' '}
               <a
                 href="https://thanksdoc.co.uk/"
                 target="_blank"
@@ -1558,7 +1580,7 @@ export default function App() {
               >
                 ThanksDoc
               </a>
-              . All rights reserved.
+              . © {new Date().getFullYear()} JesPearl Private GP Clinic.
             </p>
             <button
               type="button"
@@ -1578,7 +1600,7 @@ export default function App() {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Chat on WhatsApp"
-        className="fixed bottom-5 right-5 z-50 w-14 h-14 rounded-full bg-[#4E7A69] hover:bg-[#3D6354] text-white shadow-lg flex items-center justify-center transition-transform hover:scale-105"
+        className="fixed bottom-5 right-5 z-50 w-14 h-14 rounded-full bg-[#6F9E8B] hover:bg-[#6F9E8B] text-white shadow-lg flex items-center justify-center transition-transform hover:scale-105"
       >
         <svg viewBox="0 0 32 32" className="w-7 h-7 fill-current" aria-hidden="true">
           <path d="M16.004 2.667C8.64 2.667 2.667 8.64 2.667 16c0 2.347.613 4.64 1.773 6.667L2.667 29.333l6.84-1.747A13.28 13.28 0 0 0 16.004 29.333C23.36 29.333 29.333 23.36 29.333 16S23.36 2.667 16.004 2.667zm7.773 18.88c-.32.907-1.88 1.733-2.6 1.84-.667.107-1.507.147-2.427-.147-.56-.187-1.28-.427-2.2-.827-3.867-1.667-6.387-5.56-6.587-5.827-.187-.267-1.573-2.093-1.573-3.987 0-1.893.987-2.827 1.347-3.213.347-.387.76-.48 1.013-.48.253 0 .507 0 .733.013.24.013.56-.093.88.667.32.773 1.093 2.667 1.187 2.867.093.2.16.427.027.693-.133.267-.2.427-.387.653-.187.227-.4.507-.573.68-.187.187-.387.387-.16.773.227.387 1.013 1.667 2.173 2.707 1.493 1.333 2.747 1.747 3.133 1.947.387.2.613.16.84-.107.227-.267.973-1.133 1.24-1.52.267-.387.52-.32.88-.187.36.133 2.28 1.08 2.667 1.267.387.2.653.293.747.453.093.16.093.933-.227 1.84z" />
@@ -1589,13 +1611,13 @@ export default function App() {
       {!cookieDismissed && (
         <div className="fixed bottom-4 left-4 right-4 z-50 max-w-xl mx-auto bg-white border border-[#D2E2DA] rounded-2xl shadow-lg p-4 sm:p-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <div className="flex items-start gap-3 text-xs sm:text-sm text-[#3E4C59]">
-            <ShieldCheck className="w-5 h-5 text-[#4E7A69] shrink-0 mt-0.5" />
+            <ShieldCheck className="w-5 h-5 text-[#6F9E8B] shrink-0 mt-0.5" />
             <p>
               We use essential cookies to ensure this site works properly. See our{' '}
               <button
                 type="button"
                 onClick={() => navigate('cookies')}
-                className="underline font-semibold text-[#4E7A69] cursor-pointer"
+                className="underline font-semibold text-[#6F9E8B] cursor-pointer"
               >
                 Cookie Policy
               </button>
@@ -1605,7 +1627,7 @@ export default function App() {
           <button
             type="button"
             onClick={() => setCookieDismissed(true)}
-            className="bg-[#4E7A69] hover:bg-[#35584A] text-white text-xs font-semibold px-4 py-2 rounded-full shrink-0 cursor-pointer"
+            className="bg-[#6F9E8B] hover:bg-[#5C8A77] text-white text-xs font-semibold px-4 py-2 rounded-full shrink-0 cursor-pointer"
           >
             Accept
           </button>
