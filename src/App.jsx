@@ -259,21 +259,21 @@ const CONSULTATION_MODES = [
   {
     icon: Phone,
     title: 'Telephone consultations',
-    image: FEEDBACK_IMAGE,
+    image: '/telephone-consultation.jpg',
     description:
       'Speak directly with an experienced private GP from wherever you are for prompt advice, prescriptions, and follow-ups.',
   },
   {
     icon: Stethoscope,
     title: 'Face-to-face consultations',
-    image: SERVICES_IMAGE,
+    image: '/face-to-face.jpg',
     description:
       'Unhurried in-person appointments where your doctor takes the time to listen, examine, and build a clear care plan.',
   },
   {
     icon: Home,
     title: 'Home visits',
-    image: HERO_IMAGE,
+    image: '/home-visit.jpg',
     description:
       'Prefer to be seen at home? We provide discreet, attentive GP home visits across Worcester and surrounding areas.',
   },
@@ -547,11 +547,11 @@ export default function App() {
                               referrerPolicy="no-referrer-when-downgrade"
                             />
                           ) : (
-                            <div className="w-full h-full bg-gradient-to-br from-[#EAF2EE] via-[#F4F8F6] to-[#FDF4F0] flex items-center justify-center">
-                              <div className="w-16 h-16 rounded-2xl bg-white/90 border border-[#D2E2DA] shadow-sm flex items-center justify-center text-[#6F9E8B]">
-                                <Icon className="w-8 h-8" />
-                              </div>
-                            </div>
+                            <img
+                              src={mode.image}
+                              alt={mode.title}
+                              className="w-full h-full object-cover"
+                            />
                           )}
                         </div>
                         <div className="p-6 flex-1 flex flex-col bg-[#6F9E8B] text-white">
