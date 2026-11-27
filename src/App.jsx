@@ -916,26 +916,17 @@ export default function App() {
                 {SERVICE_CATEGORIES.map((cat) => (
                   <div
                     key={cat.title}
-                    className="bg-white border border-[#E5E7EB] border-t-4 border-t-[#6F9E8B] rounded-2xl p-6 flex flex-col justify-between space-y-5 shadow-sm hover:shadow-md transition-all"
+                    className="bg-white border border-[#E5E7EB] border-t-4 border-t-[#6F9E8B] rounded-2xl p-6 space-y-3 shadow-sm hover:shadow-md transition-all"
                   >
-                    <div className="space-y-3">
-                      <h2 className="text-lg font-bold text-[#6F9E8B]">{cat.title}</h2>
-                      <ul className="space-y-2 text-sm text-[#52606D]">
-                        {cat.items.map((item) => (
-                          <li key={item} className="flex items-start gap-2">
-                            <CheckCircle2 className="w-4 h-4 text-[#6F9E8B] shrink-0 mt-0.5" />
-                            <span>{item}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                    <button
-                      type="button"
-                      onClick={() => navigate('about')}
-                      className="text-sm font-semibold text-[#E08E6D] hover:underline text-left cursor-pointer"
-                    >
-                      Learn More →
-                    </button>
+                    <h2 className="text-lg font-bold text-[#6F9E8B]">{cat.title}</h2>
+                    <ul className="space-y-2 text-sm text-[#52606D]">
+                      {cat.items.map((item) => (
+                        <li key={item} className="flex items-start gap-2">
+                          <CheckCircle2 className="w-4 h-4 text-[#6F9E8B] shrink-0 mt-0.5" />
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
                 ))}
               </div>
