@@ -554,14 +554,14 @@ export default function App() {
                             />
                           )}
                         </div>
-                        <div className="p-6 flex-1 flex flex-col">
-                          <div className="w-10 h-10 rounded-xl bg-[#EAF2EE] text-[#4E7A69] flex items-center justify-center mb-3">
+                        <div className="p-6 flex-1 flex flex-col bg-[#3D6354] text-white">
+                          <div className="w-10 h-10 rounded-xl bg-white/15 text-white flex items-center justify-center mb-3">
                             <Icon className="w-5 h-5" />
                           </div>
-                          <h3 className="text-lg font-semibold text-[#3D6354] mb-2">
+                          <h3 className="text-lg font-semibold text-white mb-2">
                             {mode.title}
                           </h3>
-                          <p className="text-sm text-[#52606D] leading-relaxed">
+                          <p className="text-sm text-[#EAF2EE] leading-relaxed">
                             {mode.description}
                           </p>
                         </div>
