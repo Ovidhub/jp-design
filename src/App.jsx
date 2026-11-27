@@ -432,7 +432,7 @@ export default function App() {
         )}
       </header>
 
-      <main className="flex-1">
+      <main key={currentPage} className="flex-1 animate-page-enter">
         {currentPage === 'home' && (
           <>
             {/* Hero Section */}
