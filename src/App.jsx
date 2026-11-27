@@ -1574,7 +1574,7 @@ export default function App() {
 
       {/* WhatsApp Floating Tab */}
       <a
-        href="https://api.whatsapp.com/send?text=Hello%20JesPearl%20Private%20GP%20Clinic"
+        href="https://wa.me/447775069798?text=Hello%20JesPearl%20Private%20GP%20Clinic"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Chat on WhatsApp"
