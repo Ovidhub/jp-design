@@ -739,22 +739,22 @@ export default function App() {
                     return (
                       <div
                         key={faq.q}
-                        className="bg-white border border-[#E5E7EB] rounded-2xl overflow-hidden"
+                        className="bg-white border border-[#35584A] rounded-2xl overflow-hidden"
                       >
                         <button
                           type="button"
                           onClick={() => setOpenFaq(isOpen ? -1 : idx)}
-                          className="w-full px-6 py-4 text-left flex items-center justify-between gap-4 font-semibold text-[#3D6354] cursor-pointer"
+                          className="w-full px-6 py-4 text-left flex items-center justify-between gap-4 font-semibold bg-[#3D6354] text-white cursor-pointer"
                         >
                           <span>{faq.q}</span>
                           <ChevronDown
-                            className={`w-5 h-5 text-[#4E7A69] shrink-0 transition-transform ${
+                            className={`w-5 h-5 text-white shrink-0 transition-transform ${
                               isOpen ? 'rotate-180' : ''
                             }`}
                           />
                         </button>
                         {isOpen && (
-                          <div className="px-6 pb-5 text-sm text-[#52606D] leading-relaxed">
+                          <div className="px-6 py-5 bg-white text-sm text-black leading-relaxed">
                             {faq.a}
                           </div>
                         )}
