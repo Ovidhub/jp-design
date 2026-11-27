@@ -691,7 +691,7 @@ export default function App() {
                     <p className="text-xs font-semibold uppercase tracking-widest text-[#E08E6D] mb-2">
                       Patient Stories
                     </p>
-                    <h2 className="text-3xl sm:text-4xl font-bold text-[#3D6354]">
+                    <h2 className="text-3xl sm:text-4xl font-bold text-[#E08E6D]">
                       Honest words from happy clients
                     </h2>
                   </div>
@@ -700,7 +700,7 @@ export default function App() {
                     {TESTIMONIALS.map((item) => (
                       <div
                         key={item.name}
-                        className="bg-[#FAF9F6] border border-[#E5E7EB] rounded-2xl p-8 flex flex-col justify-between space-y-6"
+                        className="bg-[#FDF4F0] border border-[#F3D5C8] rounded-2xl p-8 flex flex-col justify-between space-y-6"
                       >
                         <p className="text-[#3E4C59] leading-relaxed italic">“{item.quote}”</p>
                         <div className="flex items-center gap-4">
@@ -728,7 +728,7 @@ export default function App() {
                   <p className="text-xs font-semibold uppercase tracking-widest text-[#E08E6D] mb-2">
                     Frequently Asked Questions
                   </p>
-                  <h2 className="text-3xl sm:text-4xl font-bold text-[#3D6354]">
+                  <h2 className="text-3xl sm:text-4xl font-bold text-[#E08E6D]">
                     Common questions about our clinic
                   </h2>
                 </div>
@@ -892,7 +892,7 @@ export default function App() {
                 <p className="text-xs font-semibold uppercase tracking-widest text-[#E08E6D] mb-2">
                   JesPearl Private GP Clinic
                 </p>
-                <h1 className="text-4xl sm:text-5xl font-bold text-[#3D6354]">
+                <h1 className="text-4xl sm:text-5xl font-bold text-[#E08E6D]">
                   Our Services and Fees
                 </h1>
                 <p className="mt-4 text-lg text-[#52606D] leading-relaxed">
@@ -1040,7 +1040,7 @@ export default function App() {
                       <div className="flex items-start justify-between gap-3">
                         <h4 className="font-semibold text-[#3D6354]">{item.title}</h4>
                         {item.price && (
-                          <span className="text-lg font-bold text-[#4E7A69] shrink-0">
+                          <span className="text-lg font-bold text-[#E08E6D] shrink-0">
                             {item.price}
                           </span>
                         )}
@@ -1089,7 +1089,7 @@ export default function App() {
                     >
                       <div className="flex items-start justify-between gap-3">
                         <h4 className="font-semibold text-[#3D6354]">{item.title}</h4>
-                        <span className="text-lg font-bold text-[#4E7A69] shrink-0">
+                        <span className="text-lg font-bold text-[#E08E6D] shrink-0">
                           {item.price}
                         </span>
                       </div>
@@ -1165,7 +1165,7 @@ export default function App() {
                   <p className="text-xs font-semibold uppercase tracking-widest text-[#E08E6D]">
                     About
                   </p>
-                  <h1 className="text-4xl sm:text-5xl font-bold text-[#3D6354]">
+                  <h1 className="text-4xl sm:text-5xl font-bold text-[#E08E6D]">
                     Dr Loretta Shoderu
                   </h1>
                   <p className="text-sm font-semibold text-[#4E7A69] tracking-wide">
